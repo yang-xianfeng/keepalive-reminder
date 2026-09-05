@@ -1,0 +1,21 @@
+name: Card Keepalive Daily Check
+
+on:
+  # 每天北京时间早晨 09:00 定时执行 (UTC 01:00)
+  schedule:
+    - cron: '0 1 * * *'
+  # 允许在 GitHub 网页 Actions 控制台手动点击运行
+  workflow_dispatch:
+
+jobs:
+  check-and-alert:
+    name: Keepalive Health Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # ubuntu-latest 自带 Node.js 运行时，0 依赖秒级启动
+      - name: Run Zero-Dependency Checker
+        run: node checker.js
