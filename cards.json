@@ -4,7 +4,7 @@
       "id": "hsbc_debit",
       "name": "汇丰香港蓝狮子扣账卡",
       "category": "银行借记卡",
-      "last_used": "2026-05-29",
+      "last_used": "2026-10-09",
       "cycle_days": 180,
       "remind_days": [30, 7, 3],
       "guide": "微信/支付宝绑定该卡在内地日常消费一笔（任意小额），或在手机银行 App 内换汇/转账一次。",
